@@ -49,7 +49,7 @@ SrcDirs = lists:foldl(
                     Acc
             end, [], Cfg),
 
-Deps = [{p1_cache_tab, ".*", {git, "https://github.com/processone/cache_tab", "69598a3817669e089a8dc558f402fc14f2f6190a"}},
+Deps = [{p1_cache_tab, ".*", {git, "https://github.com/friendgit/cache_tab", "8f457a2971e903155402c1693918190ebb07defa"}},
         {p1_tls, ".*", {git, "https://github.com/processone/tls", "d1366ce51e1cc05738594e1d6c6045fdbda4f3a3"}},
         {p1_stringprep, ".*", {git, "https://github.com/processone/stringprep", "9e9e0f8dbe6a70ef36e1d4436b458ca5a77fbcfb"}},
         {p1_xml, ".*", {git, "https://github.com/processone/xml", "b5309833cb9ddb4c0ac63e1ce8e07142470452cb"}},
@@ -98,7 +98,7 @@ CfgDeps = lists:flatmap(
                ({iconv, true}) ->
                     [{p1_iconv, ".*", {git, "https://github.com/processone/eiconv", "dff5ee59ebef0fd373a11804e4f833ab1b861126"}}];
                ({lager, true}) ->
-                    [{lager, ".*", {git, "https://github.com/basho/lager", "43ae5c420738da4645c42b763328fe288c4b49cb"}}];
+                    [{lager, ".*", {git, "https://github.com/friendgit/lager", "43ae5c420738da4645c42b763328fe288c4b49cb"}}];
                ({lager, false}) ->
                     [{p1_logger, ".*", {git, "https://github.com/processone/p1_logger", "c7141aff68282dec46d60a3f39cbf658d0c91961"}}];
                (_) ->
